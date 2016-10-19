@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Example of Relative and Absolute Positioning</title>		
+	</head>
+	<body>
+<style>
+.relative {
+ position: relative;
+ top: 100px; 
+ left: 100px; 
+ width: 100px;
+ height: 100px;
+ background: red;
+ margin: 10px;
+} 
+#absolute1 {
+ position: absolute;
+ top: 100px;
+ left: 200px;
+ width: 100px;
+ height: 100px;
+ background: yellow;
+}
+#absolute2 {
+ position: absolute;
+ top: 100px;
+ left: 200px;
+ width: 100px;
+ height: 100px;
+ background: purple;
+}
+#absolute3 {
+ position: absolute;
+ top: 100px;
+ left: 200px;
+ width: 100px;
+ height: 100px;
+ background: yellow;
+}
+</style>
+<div class="relative">
+ Element 1
+ <div id="absolute1">Element 4</div>
+</div>
+<div class="relative">Element 2</div>
+<div class="relative">
+ Element 3
+ <div id="absolute2">Element 5</div>
+</div>
+<div id="absolute3">Element 6</div>
+	</body>
+</html>

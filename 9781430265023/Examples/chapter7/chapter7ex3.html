@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>CSS Regions Layout</title>
+		<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<article>
+			<h2>This is the first heading</h2>
+			<h2>This is the second heading</h2>
+		</article>
+		<div id="region1"><!-- empty --></div>
+		<div id="region2"><!-- empty --></div>
+		
+		<style>
+			article h2 {
+				-webkit-flow-into: overfloweg;
+				flow-into: overfloweg;
+				-webkit-region-break-after: always;
+				break-after: always;
+			}
+ 			#region1, #region2 { 
+	 			-webkit-flow-from: overfloweg;
+				flow-from: overfloweg;
+				float: left;
+				width: 10em;
+				margin-right: 1em;
+			}
+			#region1 {
+				border: 1px solid #333;
+			}
+			#region2 {
+				border: 1px solid #ccc;
+				height: 2em;
+			}
+		</style>
+	</body>
+</html>
+
+

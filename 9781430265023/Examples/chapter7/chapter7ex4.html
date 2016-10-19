@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>CSS Regions and CSS a Shapes Layout</title>	
+		<style>
+			body {
+				margin:			0;
+				padding:		0;
+				font-family:	roboto;
+			}
+				
+			#container {
+				position:		relative;
+				margin:			auto;
+				width:			960px;
+				height:			1200px;
+				background:		transparent url(guitar.jpg) no-repeat bottom left;
+			}
+			#container h1 {
+				position:		absolute;
+				top:			300px;
+				left:			50px;
+				font-weight:	100;
+				font-size:		2.2em;
+				text-transform:	uppercase;
+				margin:			0;
+				padding:		0;
+			}
+			#container h1 span {
+				font-size:		0.5em;
+				text-transform:	none;
+			}
+
+			article {
+				-webkit-flow-into: article;
+				flow-into:			article;
+			}
+			
+			#box1, #box2 {
+				-webkit-flow-from: article;
+				flow-from:			article;
+			}
+			
+			#box1 {
+				position:		absolute;
+				top:			385px;
+				left:			50px;
+				width:			390px;
+				height:			600px;
+			    overflow: 		hidden;
+				-webkit-shape-inside: polygon(0% 0%, 100% 0%, 100% 36%, 70% 50%, 80% 70%, 50% 100%, 0% 100%, 0% 0%);
+			}
+			
+			#box2 {
+				position:		absolute;
+				top:			400px;
+				right:			50px;
+				width:			420px;
+				height:			600px;
+			    overflow: 		hidden;
+				-webkit-shape-inside: polygon(3% 0%, 5% 50%, 28% 50%, 20% 68%, 35% 85%, 45% 100%, 100% 100%, 100% 0%, 0% 0%);
+			}
+		
+		
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="title"><h1><span>the development of</span> <br />The Gibson Les Paul</h1></div>
+			<div id="box1"><!-- left side of the guitar --></div>
+			<div id="box2"><!-- right side of the guitar --></div>
+		</div>
+		<article id=”content”>
+			<p>The Gibson Les Paul was the result of a design collaboration between Gibson Guitar Corporation and the late jazz guitarist and electronics inventor Les Paul. In 1950, with the introduction of the radically innovative Fender Telecaster to the musical market, solid-body electric guitars became a public craze (hollow-body electric guitars have more acoustic resonance but are, therefore, more prone to amplifier feedback and have less natural note duration "sustain".) In reaction, Gibson Guitar president Ted McCarty brought guitarist Les Paul into the company as a consultant. Les Paul was a respected innovator who had been experimenting with guitar design for years to benefit his own music. In fact, he had hand-built a solid-body prototype called "The Log", a design widely considered the first solid-body Spanish guitar ever built, as opposed to the "Hawaiian", or lap-steel guitar. This guitar is known as "The Log" because the solid core is a pine block whose width and depth are a little more than the width of the fretboard; conventional hollow guitar sides were added for shape (Image 2), a design similar to the popular Gibson ES-335 semi-hollowbody guitar introduced in 1958. Although numerous other prototypes and limited-production solid-body models by other makers have since surfaced, it is known that in 1945–1946, Les Paul had approached Gibson with "The Log" prototype, but his solid body design was rejected.[8][9]</p>
+			<p>In 1951, this initial rejection became a design collaboration between the Gibson Guitar Corporation and Les Paul. It was agreed that the new Les Paul guitar was to be an expensive, well-made instrument in Gibson's tradition.[10] Although recollections differ regarding who contributed what to the Les Paul design, it was far from a market replica of Fender models. Founded in 1902, Gibson began offering electric hollow-body guitars in the 1930s, such as the ES-150; at minimum, these hollow-body electric models provided a set of basic design cues for the new Gibson solid-body, including a more traditionally curved body shape than offered by competitor Fender, and a glued-in ("set-in") neck, in contrast to Fender's bolt-on neck.</p>
+			<p>The significance of Les Paul's contributions to his Gibson guitar design remains controversial. The book "50 Years of the Gibson Les Paul" limits Paul's contributions to two: advice on the trapeze tailpiece, and a preference for color (stating that Paul preferred gold as "it looks expensive", and a second choice of black because "it makes your fingers appear to move faster on the box", and "looks classy―like a tuxedo").[11]</p>
+			<p>Additionally, Gibson's president Ted McCarty states that the Gibson Guitar Corporation merely approached Les Paul for the right to imprint the musician's name on the headstock to increase model sales, and that in 1951, Gibson showed Paul a nearly finished instrument. McCarty also claims that design discussions with Les Paul were limited to the tailpiece and the fitting of a maple cap over the mahogany body for increased density and sustain, which Les Paul had requested reversed.</p>
+		</article>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>CSS Regions Layout</title>
+		<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+<article id="article1">
+ <h1>Article 1</h1>
+ <p>…</p>
+</article>
+<article id="article2">
+<h1>Article 2</h1>
+ <p>…</p>
+</article>
+<article id="article3">
+<h1>Article 3</h1>
+ <p>…</p>
+</article>
+<div id="layout"><!-- single content container --></div>
+<style>
+ #article1, #article3 {
+ -webkit-flow-into: reorderedcontent;
+}
+ #article2 {
+ -webkit-flow-into: reorderedcontent;
+}
+#layout {
+ -webkit-flow-from: reorderedcontent;
+}
+</style>
+
+	</body>
+</html>

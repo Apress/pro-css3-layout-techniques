@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>CSS Regions Layout</title>
+		<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				font-family: 'Noto Sans', sans-serif;
+				font-size:		62.5%;
+			}
+			article {
+				-webkit-flow-into: 	article;
+ 				-moz-flow-into: 	article;
+				-ms-flow-into: 		article;
+				flow-into: 			article;
+				font-size:			1.2em;
+			}
+			#box1, #box2, #box3 {
+				-webkit-flow-from: 	article;
+ 				-moz-flow-from: 	article;
+				-ms-flow-from: 		article;
+				flow-from: 			article;
+			}
+			#box1, #box2, #box3 {
+				padding:			4em;
+				border:				10px solid #fff;
+				position:			absolute;
+				width:				200px;
+				height:				400px;
+				background:			#fff;
+				box-shadow:			0px 0px 10px #999;
+			}
+			#box1 {
+				background:			#f9e719;
+				top:				100px;
+				left:				100px;
+				-webkit-transform:	rotate(-5deg);
+				transform:			rotate(-5deg);
+			}
+			#box2 {
+				background:			#92f919;		
+				top:				100px;
+				left:				370px;
+			}
+			#box3 {
+				background:			#19d2f9;		
+				top:				120px;
+				left:				640px;
+				-webkit-transform:	rotate(5deg);
+				transform:			rotate(5deg);
+			}
+		</style>
+	</head>
+	<body>
+		<article>
+			<h1>Lorem Condimentum Fringilla</h1>
+			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor.</p>
+			<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<p>Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+			<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.</p>
+		</article>
+		<div id="box1"><!-- no content --></div>
+		<div id="box2"><!-- no content --></div>
+		<div id="box3"><!-- no content --></div>
+	</body>
+</html>

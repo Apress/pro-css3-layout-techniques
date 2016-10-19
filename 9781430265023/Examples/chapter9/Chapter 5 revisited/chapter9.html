@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Flexbox layout</title>
+		<link type="text/css" rel="stylesheet" href="css/flexboxgrid.css" />
+		<style>
+			
+			/* The navigation section */
+
+			
+
+			/* The jumbotron section */
+			#jumbotron {
+				background: #38CEB1;
+  				max-width:		960px;
+  				min-height:		380px;
+  				-webkit-justify-content: center;
+				justify-content: center; 
+				padding-left: 1px;				
+ 			} 
+			#jumbotron article {
+				padding:		0;
+  				align-content: center;	
+  				/* Vertical align */			
+				-webkit-justify-content: center;
+				justify-content: center;
+				text-align: center; 
+			}
+			.marginbox {
+  				align-content: center;	
+  				/* Vertical align */			
+				-webkit-justify-content: center;
+				justify-content: center;
+				text-align: center; 
+				min-height: 190px;
+				background: #EAEAEA;
+				margin:		0 1px 1px 0;
+ 			}
+
+			#jumbotron article .marginbox * {
+  				-webkit-align-self: center;
+  				align-self: center;	
+			}
+			
+			#jumbotron article .marginbox:hover {
+				background:		#efefef;	
+			}
+ 			
+
+			/* The badge benefits section */
+			#benefits {
+				width:		960px;
+				max-width:	960px;
+				margin-top: 50px;
+				height: 260px;
+ 			} 
+			#benefits article.badge img {
+				margin:			0.5em 0;
+				margin-right: 10px;
+
+			}
+			#benefits article h1 {
+				font-size:		2em;
+				padding-right:  1em;
+				font-weight:	normal;
+				margin-bottom:	0.5em;
+			}
+			
+			#benefits article h3 {
+				font-size:		1.6em;
+				font-weight:	normal;
+				margin:			0;
+				padding-left: 0;
+				text-align: 	left;
+			}
+			
+			#benefits article p {
+				text-align: 	left;
+				padding:		0;
+				font-size:		1.2em;
+				margin-bottom:	1em;
+			}
+		</style>
+		
+		<style>
+			body {
+				font-family: "Roboto", sans-serif;
+				font-size:		80%;
+			}
+			#container {
+				max-width:		960px;
+				margin:			auto;
+			}
+			
+			nav ul {
+				margin:			0;
+				padding:		0;
+				
+			}
+			nav ul li {
+				margin:			0;
+				padding:		0;
+				list-style:		none;
+				text-transform: uppercase;
+			}
+			
+			nav ul li a {
+				text-decoration: none;
+				color:			#333;	
+			}
+			
+			h1, h2, h3, p {
+				margin:			0;
+				padding:		0;
+			}
+			
+			p {
+				text-align:		center;
+				padding:		0.5em 3em;
+			}
+			
+			input {
+				background:		#efefef;
+				color:			#999;
+				border:			none;
+				border-radius:  10px;
+				text-indent:	1em;
+				padding:		5px;
+				text-transform: uppercase;
+			}
+					
+		</style>		
+		
+	</head>
+	<body>
+	<div id="container">
+<!—The navigation section -->
+<!-- 
+<nav>
+ <ul class="row start-xs">
+  <li class="col-xs"><a href="#">Home</a></li>
+  <li class="col-xs"><a href="#">Locations</a></li>
+  <li class="col-xs"><a href="#">Financing</a></li>
+  <li class="col-xs-2"><a href="#">Special Offers</a></li>
+  <li class="col-xs"><a href="#">About us</a></li>
+  <li class="col-xs"><a href="#">Contact Us</a></li>
+  <li class="col-xs-offset-2 col-xs searchform"><form><input type="text" value="search" /></form></li>
+ </ul>
+</nav>
+-->
+<!—The big icons/jumbotron section -->
+<!-- 
+<section id="jumbotron" class="row">
+ <article class="col-lg-4 col-xs-12">
+  <div class="marginbox row">
+   <h2 class="col-xs-12">Free Advice</h2>
+   <p class="col-xs-12">All our impartial advice is offered completely free of charge</p>
+   <div class="col-xs-12 first-xs"><img src="images/bigicon-freeadvice.png" width="52" height="41" /></div>
+  </div>
+ </article>
+ <article class="col-lg-4 col-xs-12">
+  <div class="marginbox row">
+   <h2 class="col-xs-12">Discounted Removals</h2>
+   <p class="col-xs-12">Once you’ve found your dream home we can help get you moved in</p>
+   <div class="col-xs-12 first-xs"><img src="images/bigicon-removals.png" width="50" height="41" /></div>
+  </div>
+ </article>
+ <article class="col-lg-4 col-xs-12">
+  <div class="marginbox row">
+   <h2 class="col-xs-12">Buying Incentives</h2>
+   <p class="col-xs-12">Many of our homes offer additional benefits such as rebates</p>
+   <div class="col-xs-12 first-xs"><img src="images/bigicon-incentives.png" width="24" height="41" /></div>
+  </div>
+ </article>
+ <article class="col-lg-4 col-xs-12">
+  <div class="marginbox row">
+   <h2 class="col-xs-12">Locations nationwide</h2>
+   <p class="col-xs-12">We have agents and properties across all 50 States</p>
+   <div class="col-xs-12 first-xs"><img src="images/bigicon-locations.png" width="41" height="41" /></div>
+  </div>
+ </article>
+ <article class="col-lg-4 col-xs-12">
+  <div class="marginbox row">
+   <h2 class="col-xs-12">Highest Quality Homes</h2>
+   <p class="col-xs-12">Every single home we offer is guaranteed for quality</p>
+   <div class="col-xs-12 first-xs"><img src="images/bigicon-quality.png" width="51" height="41" /></div>
+  </div>
+ </article>
+ <article class="col-lg-4 col-xs-12">
+  <div class="marginbox row">
+   <h2 class="col-xs-12">No obligation</h2>
+   <p class="col-xs-12">You can withdraw from the process at any time without penalty</p>
+   <div class="col-xs-12 first-xs"><img src="images/bigicon-noobligation.png" width="45" height="41" /></div>
+  </div>
+ </article>
+</section>
+-->
+<!—The badge benefits section -->
+
+<section id="benefits" class="row">
+  <article class="col-lg-4">
+   <h1>Looking for a beautiful new home that won’t break the bank?</h1>
+   <p>Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum.</p>
+   <p>Curabitur blandit tempus porttitor. Aenean eu leo quam. 
+  </article>
+  <div class="col-lg-8 row">
+  <article class="badge col-lg-6 row">
+  	<div class="col-lg-9 row">
+  		<h3 class="col-lg-12">Quality without compromise</h3>
+   		<p class="col-lg-12">We have homes that suit every budget without compromising on quality</p>
+   	</div>
+    <div class="col-lg-3 first-xs"><img src="images/badge-quality.png" width="38" height="38" /></div>
+  </article>
+   <article class="badge col-lg-6 row">
+  	<div class="col-lg-9 row">
+  		<h3 class="col-lg-12">Trade-up facilities</h3>
+   		<p class="col-lg-12">If you have a home to sell, we can help market it, and arrange bridging finance</p>
+   	</div>
+    <div class="col-lg-3 first-xs"><img src="images/badge-tradeup.png" width="38" height="38" /></div>
+  </article>
+    <article class="badge col-lg-6 row">
+  	<div class="col-lg-9 row">
+  		<h3 class="col-lg-12">Wonderful locations</h3>
+   		<p class="col-lg-12">Don’t settle for a nice home in a bad location. All our locations are carefully chosen</p>
+   	</div>
+   <div class="col-lg-3 first-xs"><img src="images/badge-locations.png" width="38" height="38" /></div>
+  </article>
+    <article class="badge col-lg-6 row">
+  	<div class="col-lg-9 row">
+  		<h3 class="col-lg-12">Value-added service</h3>
+   		<p class="col-lg-12">We offer a range of packages that can add value to your home-buying experience, </p>
+   	</div>
+    <div class="col-lg-3 first-xs"><img src="images/badge-valueadd.png" width="38" height="38" /></div>
+  </article>
+  </div>
+</section>
+</div>
+	</body>
+</html>
